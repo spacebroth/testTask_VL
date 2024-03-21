@@ -31,7 +31,7 @@ class TestObjects:
     @allure.title('Получение объекта, возвращает объект по его ID')
     # @pytest.mark.objects
     def test_get_object(self, asserts, client, obj):
-        obj_res = client.object().get_obj(obj['id'])
+        obj_res = client.object().get_obj(obj.json()['id'])
         asserts.status_code(obj_res, 200)
         asserts.validate_res(obj_res, GetObjResponse)
         asserts.field_equals(obj_res.json()['id'] == obj['id'])  # Это если в ответе приходит ID
