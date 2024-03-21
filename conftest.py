@@ -18,7 +18,7 @@ def client():
 @pytest.fixture
 def obj():
     response = TestAPI(BASE_URL).object().create_obj('a', 'TEST!@#$%^&*()_+qwerty')
-    return {'id': f'{response["id"]}', 'a': f'{response["a"]}'}
+    return response
 
 
 # Некоторые тесты могут быть зависимы от версии или на некоторых версиях тест не актуален. Перед запуском тестов
