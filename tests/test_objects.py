@@ -34,5 +34,5 @@ class TestObjects:
         obj_res = client.object().get_obj(obj.json()['id'])
         asserts.status_code(obj_res, 200)
         asserts.validate_res(obj_res, GetObjResponse)
-        asserts.field_equals(obj_res.json()['id'] == obj['id'])  # Это если в ответе приходит ID
-        asserts.field_equals(obj_res.json()['a'] == obj['a'])
+        asserts.field_equals(obj_res.json()['id'] == obj.json()['id'])  # Это если в ответе приходит ID
+        asserts.field_equals(obj_res.json()['a'] == obj.json()['a'])
