@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.pytest_cache
+*.py[cod]
+*$py.class
+.idea
+.vscode
+.DS_Store
+1.py
+#virtual env
+.venv
+venv
+
+# reports
+report/
+allure-reports/
+# env
+.env
+
+# logging
+*.log
+
+Pipfile
+Pipfile.lock
+
+#allure
+cm
